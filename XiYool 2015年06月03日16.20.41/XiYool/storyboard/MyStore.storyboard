@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mystoreload Controller-->
+        <scene sceneID="7Tb-Je-4ap">
+            <objects>
+                <viewController storyboardIdentifier="storeload" id="yDq-ob-BPp" customClass="MystoreloadController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zti-HD-68E"/>
+                        <viewControllerLayoutGuide type="bottom" id="TV4-Pl-IBE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j1c-Vg-mMd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TSV-hr-C0O">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="296"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="店铺名称" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUe-hp-8Ek">
+                                <rect key="frame" x="1" y="244" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="边框2.png" translatesAutoresizingMaskIntoConstraints="NO" id="RWA-An-bwg">
+                                <rect key="frame" x="0.0" y="466" width="375" height="50"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="边框2.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Le-YH-O62">
+                                <rect key="frame" x="0.0" y="405" width="375" height="50"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="边框2.png" translatesAutoresizingMaskIntoConstraints="NO" id="LYi-Sa-LKa">
+                                <rect key="frame" x="0.0" y="304" width="375" height="35"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="边框2.png" translatesAutoresizingMaskIntoConstraints="NO" id="2WU-hU-UJa">
+                                <rect key="frame" x="0.0" y="347" width="375" height="50"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="边框2.png" translatesAutoresizingMaskIntoConstraints="NO" id="s1h-Kh-sf2">
+                                <rect key="frame" x="0.0" y="524" width="375" height="50"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="store_detail_address.png" translatesAutoresizingMaskIntoConstraints="NO" id="4ic-1X-DtO">
+                                <rect key="frame" x="16" y="354" width="35" height="35"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="store_detail_tel0.png" translatesAutoresizingMaskIntoConstraints="NO" id="A1l-tY-Nqr">
+                                <rect key="frame" x="16" y="412" width="35" height="35"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="store_detail_latest.png" translatesAutoresizingMaskIntoConstraints="NO" id="gHu-ve-lCX">
+                                <rect key="frame" x="16" y="481" width="35" height="20"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="store_detail_qrcode.png" translatesAutoresizingMaskIntoConstraints="NO" id="5P0-Cd-Uwm">
+                                <rect key="frame" x="16" y="531" width="35" height="35"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yC-rl-2cr">
+                                <rect key="frame" x="203" y="597" width="153" height="42"/>
+                                <color key="backgroundColor" red="0.25345308816626988" green="0.5507514184408977" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="编辑">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofM-oV-9Wj">
+                                <rect key="frame" x="21" y="597" width="153" height="43"/>
+                                <color key="backgroundColor" red="1" green="0.28978286961525879" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="删除">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="store_detail_edit.png" translatesAutoresizingMaskIntoConstraints="NO" id="jKa-qm-r54">
+                                <rect key="frame" x="233" y="601" width="33" height="33"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="store_detail_del.png" translatesAutoresizingMaskIntoConstraints="NO" id="0sm-l3-qXx">
+                                <rect key="frame" x="49" y="602" width="33" height="33"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="店铺简绍" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRo-NY-yQO">
+                                <rect key="frame" x="21" y="311" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="店铺位置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDx-aY-WSE">
+                                <rect key="frame" x="59" y="361" width="297" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="店铺电话" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzB-OR-xee">
+                                <rect key="frame" x="59" y="419" width="297" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="arrow_more.png" translatesAutoresizingMaskIntoConstraints="NO" id="0HV-fB-xT7">
+                                <rect key="frame" x="337" y="538" width="22" height="22"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="arrow_more.png" translatesAutoresizingMaskIntoConstraints="NO" id="qBy-me-otq">
+                                <rect key="frame" x="337" y="480" width="22" height="22"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vf-6l-oTU">
+                                <rect key="frame" x="59" y="466" width="307" height="50"/>
+                                <state key="normal" title="最新活动">
+                                    <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37l-ww-10k">
+                                <rect key="frame" x="59" y="524" width="307" height="50"/>
+                                <state key="normal" title="扫描二维码">
+                                    <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MB6-bQ-btg">
+                                <rect key="frame" x="137" y="98" width="100" height="100"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="iconimge" destination="MB6-bQ-btg" id="uFp-NU-jCi"/>
+                        <outlet property="storeadress" destination="iDx-aY-WSE" id="r0k-wt-Cg4"/>
+                        <outlet property="storejianjie" destination="XRo-NY-yQO" id="mRi-im-Etb"/>
+                        <outlet property="storename" destination="DUe-hp-8Ek" id="qAM-Zw-cfk"/>
+                        <outlet property="storephone" destination="fzB-OR-xee" id="hrR-aU-zCY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2eh-QM-81o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496.5" y="-251.5"/>
+        </scene>
+        <!--My Store View Controller-->
+        <scene sceneID="aBj-Ps-a3j">
+            <objects>
+                <viewController storyboardIdentifier="MyStore" id="tpw-I2-yUK" customClass="MyStoreViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aKy-bV-xCn"/>
+                        <viewControllerLayoutGuide type="bottom" id="xEN-Gj-wlB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cLN-6Z-dAQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZr-ho-YQD">
+                                <rect key="frame" x="45" y="74" width="285" height="30"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="创建商店">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="opeNewStore:" destination="tpw-I2-yUK" eventType="touchUpInside" id="zoF-Fi-bDx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="WZr-ho-YQD" secondAttribute="trailing" constant="29" id="FId-La-93J"/>
+                            <constraint firstItem="WZr-ho-YQD" firstAttribute="leading" secondItem="cLN-6Z-dAQ" secondAttribute="leadingMargin" constant="29" id="fQc-Yd-w2a"/>
+                            <constraint firstItem="WZr-ho-YQD" firstAttribute="top" secondItem="aKy-bV-xCn" secondAttribute="bottom" constant="54" id="y6e-2T-u3N"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tnview" destination="WZr-ho-YQD" id="Wr0-Xb-02T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IaQ-WF-4RT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-166.5" y="-35.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow_more.png" width="22" height="22"/>
+        <image name="store_detail_address.png" width="100" height="100"/>
+        <image name="store_detail_del.png" width="56" height="56"/>
+        <image name="store_detail_edit.png" width="56" height="56"/>
+        <image name="store_detail_latest.png" width="62" height="32"/>
+        <image name="store_detail_qrcode.png" width="100" height="100"/>
+        <image name="store_detail_tel0.png" width="135" height="135"/>
+        <image name="边框2.png" width="500" height="324"/>
+    </resources>
+</document>
