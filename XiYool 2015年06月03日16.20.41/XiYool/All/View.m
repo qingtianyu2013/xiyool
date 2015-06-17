@@ -73,7 +73,7 @@ static View *sharemode = nil;
     if(_registerview==nil)
     {
         @try {
-            UIStoryboard *main=[UIStoryboard storyboardWithName:@"ragister" bundle:nil];
+            UIStoryboard *main=[UIStoryboard storyboardWithName:@"register" bundle:nil];
             RegisterViewController *viewcontroller=[main instantiateViewControllerWithIdentifier:@"registerview"];
             viewcontroller.view.frame=_frame;
             _registerview=viewcontroller;
