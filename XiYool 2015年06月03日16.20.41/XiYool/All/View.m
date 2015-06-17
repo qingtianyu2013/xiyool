@@ -73,13 +73,12 @@ static View *sharemode = nil;
     if(_registerview==nil)
     {
         @try {
-            UIStoryboard *main=[UIStoryboard storyboardWithName:@"ragister" bundle:nil];
+            UIStoryboard *main=[UIStoryboard storyboardWithName:@"register" bundle:nil];
             RegisterViewController *viewcontroller=[main instantiateViewControllerWithIdentifier:@"registerview"];
             viewcontroller.view.frame=_frame;
             _registerview=viewcontroller;
         }
         @catch (NSException *exception) {
-            NSLog(@"%@",exception);
             [WKAlertView showAlertViewWithStyle:WKAlertViewStyleFail title:@"页面加载失败" detail:exception.reason canleButtonTitle:nil okButtonTitle:@"取消" callBlock:^(MyWindowClick buttonIndex) {
                 WKAlertView *alter=[WKAlertView shared];
                 alter.hidden=YES;

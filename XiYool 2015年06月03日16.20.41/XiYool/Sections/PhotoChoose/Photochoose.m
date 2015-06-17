@@ -43,7 +43,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)choose:(id)sender {
-    UIImageWriteToSavedPhotosAlbum(_imge.image, self, nil, nil);
+   // UIImageWriteToSavedPhotosAlbum(_imge.image, self, nil, nil);
     [self.navigationController popViewControllerAnimated:YES];
     NSNotification *notification =[NSNotification notificationWithName:@"PicChoose" object:nil userInfo:nil];
     //通过通知中心发送通知
