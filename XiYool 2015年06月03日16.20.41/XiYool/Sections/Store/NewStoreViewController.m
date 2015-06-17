@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *lxdh;
 @property (weak, nonatomic) IBOutlet UIButton *savebtn;
 @property (weak, nonatomic) IBOutlet UIButton *icon;
+@property (weak, nonatomic) IBOutlet UITextField *dpmc2;
 
 @end
 
@@ -42,10 +43,10 @@
         if(indexPath.row==0)
         {
             [_DPjj addDHxiahuaxieSize:15 LineWidth:1 Color:[UIColor blackColor]];
-            [_dpdz addDHxiahuaxieSize:10 LineWidth:1 Color:[UIColor blackColor]];
-            [_dplb addDHxiahuaxieSize:10 LineWidth:1 Color:[UIColor blackColor]];
-            [_dpmc addDHxiahuaxieSize:10 LineWidth:1 Color:[UIColor blackColor]];
-            [_lxdh addDHxiahuaxieSize:10 LineWidth:1 Color:[UIColor blackColor]];
+//            [_dpdz addDHxiahuaxieSize:10 LineWidth:1 Color:[UIColor blackColor]];
+//            [_dplb addDHxiahuaxieSize:10 LineWidth:1 Color:[UIColor blackColor]];
+//            [_dpmc addDHxiahuaxieSize:10 LineWidth:1 Color:[UIColor blackColor]];
+//            [_lxdh addDHxiahuaxieSize:10 LineWidth:1 Color:[UIColor blackColor]];
         }
         CGRect frame=[UIScreen mainScreen].applicationFrame;
         //获取cell实例的高度
@@ -69,7 +70,8 @@
     [_icon addSubview:imageview];
 }
 - (IBAction)updataforserver:(id)sender {
-    [action StoreCreateActionInsertUser:[Data sharedController].userid StoreName:_dpmc.text StoreCategory:_DPjj.text StoreAddress:_dpdz.text StoreInstruction:nil StoreTelephone:nil FileIcon:[View sharedController].photopic Block:nil];
+    NSString *name=[NSString stringWithFormat:@"%@-%@",_dpmc.text,_dpmc2.text];
+    [action StoreCreateActionInsertUser:[Data sharedController].userid StoreName:name StoreCategory:_dplb.text StoreAddress:_dpdz.text StoreInstruction:_DPjj.text  StoreTelephone:_lxdh.text FileIcon:[View sharedController].photopic Block:nil];
 }
 /*
 #pragma mark - Navigation
