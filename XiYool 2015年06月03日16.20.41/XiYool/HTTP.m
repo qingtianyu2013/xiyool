@@ -80,7 +80,6 @@
     [request setHTTPMethod:@"POST"];
     NSOperationQueue *queue=[[NSOperationQueue alloc]init];
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        NSLog(@"%@",[[NSString alloc]initWithData:data encoding:NSASCIIStringEncoding]);
         if(Block){
             Block(response,data,connectionError);
         }

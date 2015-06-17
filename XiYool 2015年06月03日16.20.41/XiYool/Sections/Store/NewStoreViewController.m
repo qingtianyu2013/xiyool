@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *savebtn;
 @property (weak, nonatomic) IBOutlet UIButton *icon;
 @property (weak, nonatomic) IBOutlet UITextField *dpmc2;
+@property (strong , nonatomic ) UIImageView *iconimgae;
 
 @end
 
@@ -63,15 +64,36 @@
 }
 -(void)picvchoose
 {
-    [_icon removeFromSuperview];
     UIImage *image= [View sharedController].photopic;
-    UIImageView *imageview=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, _icon.frame.size.width, _icon.frame.size.height)];
-    imageview.image=image;
-    [_icon addSubview:imageview];
+    if(_iconimgae == nil)
+    {
+         _iconimgae=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, _icon.frame.size.width, _icon.frame.size.height)];
+        [_icon addSubview:_iconimgae];
+    
+    }
+   _iconimgae.image=image;
+    
 }
 - (IBAction)updataforserver:(id)sender {
     NSString *name=[NSString stringWithFormat:@"%@-%@",_dpmc.text,_dpmc2.text];
-    [action StoreCreateActionInsertUser:[Data sharedController].userid StoreName:name StoreCategory:_dplb.text StoreAddress:_dpdz.text StoreInstruction:_DPjj.text  StoreTelephone:_lxdh.text FileIcon:[View sharedController].photopic Block:nil];
+    [action StoreCreateActionInsertUser:[Data sharedController].userid StoreName:name StoreCategory:_dplb.text StoreAddress:_dpdz.text StoreInstruction:_DPjj.text  StoreTelephone:_lxdh.text FileIcon:[View sharedController].photopic Block:^(){
+        Data *udt=[Data sharedController];
+        if ([udt.status isEqualToNumber:@1]) {
+            [WKAlertView showAlertViewWithStyle:WKAlertViewStyleFail title:@"创建成功" detail:nil canleButtonTitle:nil okButtonTitle:@"确定" callBlock:^(MyWindowClick buttonIndex){
+                [WKAlertView shared].hidden=YES;
+                WKAlertView *alert=[WKAlertView shared];
+                alert=nil;
+            }];
+        }else
+        {
+            [WKAlertView showAlertViewWithStyle:WKAlertViewStyleFail title:@"创建失败" detail:udt.msg  canleButtonTitle:nil okButtonTitle:@"确定" callBlock:^(MyWindowClick buttonIndex){
+                [WKAlertView shared].hidden=YES;
+                WKAlertView *alert=[WKAlertView shared];
+                alert=nil;
+            }];
+        }
+       
+    }];
 }
 /*
 #pragma mark - Navigation

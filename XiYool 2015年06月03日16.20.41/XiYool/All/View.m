@@ -79,7 +79,6 @@ static View *sharemode = nil;
             _registerview=viewcontroller;
         }
         @catch (NSException *exception) {
-            NSLog(@"%@",exception);
             [WKAlertView showAlertViewWithStyle:WKAlertViewStyleFail title:@"页面加载失败" detail:exception.reason canleButtonTitle:nil okButtonTitle:@"取消" callBlock:^(MyWindowClick buttonIndex) {
                 WKAlertView *alter=[WKAlertView shared];
                 alter.hidden=YES;

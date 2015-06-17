@@ -178,7 +178,16 @@
     NSMutableDictionary *dic2=[[NSMutableDictionary alloc]init];
     [dic2 setObject:FileIcon forKey:@"fileIcon"];
     [HTTP PostImagesToServer:url dicPostValue:dic1 dicImages:dic2 Block:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        NSLog(@"%@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);
+        NSError *error;
+        NSDictionary *backdt=[[CJSONDeserializer deserializer]deserialize:data error:&error];
+        Data *udt=[Data sharedController];
+        if (backdt != nil) {
+            udt.msg=[backdt objectForKey:@"msg"];
+            udt.status=[backdt objectForKey:@"status"];
+        }else{
+            udt.msg=@"未知错误";
+            udt.status=@0;
+        }
         if (Block) {
             Block();
         }
