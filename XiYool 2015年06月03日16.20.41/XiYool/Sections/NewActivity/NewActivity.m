@@ -10,12 +10,14 @@
 #import "AddDonHua.h"
 
 @interface NewActivity ()
+@property (strong , nonatomic)UITextField *Actname;
+@property (strong , nonatomic)UITextField *Actlist;
 
 @end
 
 @implementation NewActivity
 {
-   
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,7 +33,6 @@
     _table.delegate =self;
     _table.dataSource=self;
     _table.separatorStyle=NO;
-    
     //参数设置
     int cellh=60;
     int PYx=2;
@@ -42,8 +43,12 @@
     cell1=[[UITableViewCell alloc]initWithFrame:CGRectMake(0, 0, size.width, cellh)];
     lable1=[[UILabel alloc]initWithFrame:CGRectMake(LPYx, 0, size.width, cellh)];
     lable1.text=@"活动名称" ;
+    _Actname =[[UITextField alloc]initWithFrame:CGRectMake(LPYx+80, 0, size.width,34)];
+    _Actname.borderStyle =UITextBorderStyleRoundedRect;
+    [cell1 addSubview: _Actname];
     [cell1 addSubview:lable1];
     [cell1 addDHfangkuangFrame:CGRectMake(PYx, PXy, size.width-PYx*2, cellh-PXy*2) lineWidth:1 Color:[UIColor grayColor]];
+    cell1.selectionStyle=UITableViewCellSelectionStyleNone;
     [_cellary addObject:cell1];
     [_cellheight addObject:[NSNumber numberWithInt:cellh]];
     
@@ -53,6 +58,11 @@
     lable1.text=@"活动类别" ;
     [cell1 addSubview:lable1];
     [cell1 addDHfangkuangFrame:CGRectMake(PYx, PXy, size.width-PYx*2, cellh-PXy*2) lineWidth:1 Color:[UIColor grayColor]];
+    
+    _Actlist =[[UITextField alloc]initWithFrame:CGRectMake(LPYx+80, 0, size.width, 34)];
+    _Actlist.borderStyle =UITextBorderStyleRoundedRect;
+    [cell1 addSubview: _Actlist];
+     cell1.selectionStyle=UITableViewCellSelectionStyleNone;
     [_cellary addObject:cell1];
     [_cellheight addObject:[NSNumber numberWithInt:cellh]];
     
@@ -62,6 +72,7 @@
     lable1.text=@"开始时间" ;
     [cell1 addSubview:lable1];
     [cell1 addDHfangkuangFrame:CGRectMake(PYx, PXy, size.width-PYx*2, cellh-PXy*2) lineWidth:1 Color:[UIColor grayColor]];
+     cell1.selectionStyle=UITableViewCellSelectionStyleNone;
     [_cellary addObject:cell1];
     [_cellheight addObject:[NSNumber numberWithInt:cellh]];
     
@@ -71,6 +82,7 @@
     lable1.text=@"结束时间" ;
     [cell1 addSubview:lable1];
     [cell1 addDHfangkuangFrame:CGRectMake(PYx, PXy, size.width-PYx*2, cellh-PXy*2) lineWidth:1 Color:[UIColor grayColor]];
+     cell1.selectionStyle=UITableViewCellSelectionStyleNone;
     [_cellary addObject:cell1];
     [_cellheight addObject:[NSNumber numberWithInt:cellh]];
     
@@ -82,6 +94,7 @@
     [button1 setTitle:@"添加活动图片" forState:UIControlStateNormal];
     button1.backgroundColor=[UIColor colorWithRed:22.0/255 green:122.0/255 blue:255.0/255 alpha:1.0];
     [cell1 addSubview:button1];
+     cell1.selectionStyle=UITableViewCellSelectionStyleNone;
     [_cellary addObject:cell1];
     [_cellheight addObject:[NSNumber numberWithInt:cellh]];
     
@@ -91,6 +104,7 @@
     lable1.text=@"活动内容" ;
     [cell1 addSubview:lable1];
     [cell1 addDHfangkuangFrame:CGRectMake(PYx, PXy, size.width-PYx*2, cellh-PXy*2) lineWidth:1 Color:[UIColor grayColor]];
+     cell1.selectionStyle=UITableViewCellSelectionStyleNone;
     [_cellary addObject:cell1];
     [_cellheight addObject:[NSNumber numberWithInt:cellh]];
     
@@ -102,6 +116,7 @@
     [button1 setTitle:@"保存" forState:UIControlStateNormal];
     button1.backgroundColor=[UIColor colorWithRed:22.0/255 green:122.0/255 blue:255.0/255 alpha:1.0];
     [cell1 addSubview:button1];
+     cell1.selectionStyle=UITableViewCellSelectionStyleNone;
     [_cellary addObject:cell1];
     [_cellheight addObject:[NSNumber numberWithInt:cellh]];
 
@@ -150,6 +165,12 @@
     
     NSNumber *db=_cellheight[indexPath.row];
     return db.intValue;
+}
+//禁止被选中
+- (NSIndexPath *)tableView:(UITableView *)tv willSelectRowAtIndexPath:(NSIndexPath *)path
+{
+    //根据 NSIndexPath判定行是否可选。
+    return nil;
 }
 
 @end

@@ -41,7 +41,7 @@
                 NSDictionary *msgdt=[backdt objectForKey:@"msg"];
                 udt.userid=[msgdt objectForKey:@"userId"];
                 udt.icon=[msgdt objectForKey:@"icon"];
-                udt.storeid=[msgdt objectForKey:@"storeid"];
+                udt.storeid=[backdt objectForKey:@"storeId"];
                 
             }else
             {
