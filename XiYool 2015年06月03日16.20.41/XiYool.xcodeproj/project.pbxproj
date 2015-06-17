@@ -324,7 +324,7 @@
 		02720E061AF75D0100AB664F /* XiYoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XiYoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02720E0B1AF75D0100AB664F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02720E0C1AF75D0100AB664F /* XiYoolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XiYoolTests.m; sourceTree = "<group>"; };
-		028542FC1B00699E00C59A87 /* newstore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = newstore.storyboard; path = ../../storyboard/newstore.storyboard; sourceTree = "<group>"; };
+		028542FC1B00699E00C59A87 /* newstore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = newstore.storyboard; path = storyboard/newstore.storyboard; sourceTree = "<group>"; };
 		02EBAB1F1AF7618C00AE4224 /* action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = action.h; path = All/action.h; sourceTree = "<group>"; };
 		02EBAB201AF7618C00AE4224 /* action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = action.m; path = All/action.m; sourceTree = "<group>"; };
 		02EBAB221AF761D500AE4224 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = View.h; path = All/View.h; sourceTree = "<group>"; };
@@ -626,7 +626,6 @@
 				025CCD7D1B0C551200E9E12F /* MyStoreViewController.m */,
 				025CCD7E1B0C551200E9E12F /* NewStoreViewController.h */,
 				025CCD7F1B0C551200E9E12F /* NewStoreViewController.m */,
-				028542FC1B00699E00C59A87 /* newstore.storyboard */,
 				0263DFB11B15965F0006D6B6 /* MystoreloadController.h */,
 				0263DFB21B15965F0006D6B6 /* MystoreloadController.m */,
 			);
@@ -655,7 +654,6 @@
 		0263DFA21B154FF70006D6B6 /* Photochoose */ = {
 			isa = PBXGroup;
 			children = (
-				0263DFA61B15507D0006D6B6 /* PhotoChoose.storyboard */,
 				0263DFA31B1550500006D6B6 /* Photochoose.h */,
 				0263DFA41B1550500006D6B6 /* Photochoose.m */,
 			);
@@ -674,10 +672,8 @@
 		0263DFB61B15B3E90006D6B6 /* NewActiVity */ = {
 			isa = PBXGroup;
 			children = (
-				0263DFB41B15B3630006D6B6 /* Createactivity.storyboard */,
 				0263DFB71B15B43C0006D6B6 /* CreateActivity.h */,
 				0263DFB81B15B43C0006D6B6 /* CreateActivity.m */,
-				0263DFBA1B15B46F0006D6B6 /* NewActivity.storyboard */,
 				0263DFBC1B15B48A0006D6B6 /* NewActivity.h */,
 				0263DFBD1B15B48A0006D6B6 /* NewActivity.m */,
 			);
@@ -687,8 +683,12 @@
 		026ED2951AF9E88700BB8EE5 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				028542FC1B00699E00C59A87 /* newstore.storyboard */,
+				0263DFBA1B15B46F0006D6B6 /* NewActivity.storyboard */,
 				026ED2981AF9EAA600BB8EE5 /* register.storyboard */,
+				0263DFA61B15507D0006D6B6 /* PhotoChoose.storyboard */,
 				0268DC4E1B04469600D4F4A1 /* MyStore.storyboard */,
+				0263DFB41B15B3630006D6B6 /* Createactivity.storyboard */,
 			);
 			name = storyboard;
 			sourceTree = "<group>";
