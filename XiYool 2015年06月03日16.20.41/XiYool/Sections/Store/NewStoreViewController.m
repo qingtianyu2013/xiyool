@@ -76,6 +76,8 @@
 }
 - (IBAction)updataforserver:(id)sender {
     NSString *name=[NSString stringWithFormat:@"%@-%@",_dpmc.text,_dpmc2.text];
+     WKAlertView *alert=[WKAlertView showAlertViewWithStyle:WKAlertViewStyleLoading title:@"请稍后..." detail:nil canleButtonTitle:nil okButtonTitle:nil callBlock:^(MyWindowClick buttonIndex){
+    }];
     [action StoreCreateActionInsertUser:[Data sharedController].userid StoreName:name StoreCategory:_dplb.text StoreAddress:_dpdz.text StoreInstruction:_DPjj.text  StoreTelephone:_lxdh.text FileIcon:[View sharedController].photopic Block:^(){
         Data *udt=[Data sharedController];
         if ([udt.status isEqualToNumber:@1]) {

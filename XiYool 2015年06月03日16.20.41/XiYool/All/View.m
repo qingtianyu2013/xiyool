@@ -137,6 +137,7 @@ static View *sharemode = nil;
             frame.origin.y=50;
             frame.size.height=  frame.size.height-40;
             viewcontroller.view.frame =frame;
+            _Mystoreload = viewcontroller;
             [_mainview addSubview:viewcontroller.view];
             [_mainview bringSubviewToFront:viewcontroller.view];
         }

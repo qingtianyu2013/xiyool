@@ -131,7 +131,8 @@ static int _WIDTH=200;
       NSLog(@"loadview");
   }else if(indexPath.row == 1)
   {
-
+      [[View sharedController] LoadNewActivity];
+      [[View sharedController]loadleftlist];
   }else if(indexPath.row == 2)
   {
       [[View sharedController] LoadMyStore];

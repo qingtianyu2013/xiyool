@@ -28,4 +28,6 @@
 +(void)MainRuningCallBack:(void(^)())block;
 //上传通讯录
 +(void)GetCommunicationList:(NSString *)communicationList UsetId:(NSString *)userId Block:(void(^)())Block;
+//删除商店
++(void)StoreDeleteActionUserId:(NSString *)userid StoreID:(NSString *)StoreID Block:(void(^)())Block;
 @end

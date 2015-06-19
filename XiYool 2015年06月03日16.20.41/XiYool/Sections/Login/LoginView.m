@@ -136,8 +136,8 @@
             
             [action MainRuningCallBack:^(){
              View *vm=[View sharedController];
-                vm.loginview.hidden=YES;
-                vm.loginview=nil;
+               // vm.loginview.hidden=YES;
+               // vm.loginview=nil;
             }];
         }
         }];

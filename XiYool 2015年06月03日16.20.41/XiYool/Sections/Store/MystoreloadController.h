@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MystoreloadController : UIViewController
+- (IBAction)deleteStore:(id)sender;
 
 @end

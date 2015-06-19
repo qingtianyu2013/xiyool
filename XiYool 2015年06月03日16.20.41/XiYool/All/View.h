@@ -21,6 +21,7 @@
 @property(nonatomic,strong)UIViewController *MyStoreViewController;
 @property(nonatomic,strong)UIViewController *Photochoosecontroller;
 @property(nonatomic,strong)UIViewController *NewActivity;
+@property(nonatomic,strong)UIViewController *Mystoreload;
 
 @property (nonatomic ,strong ) UIImage *photopic;
 

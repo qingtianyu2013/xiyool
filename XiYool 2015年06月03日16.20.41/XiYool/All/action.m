@@ -193,6 +193,26 @@
         }
     }];
 }
++(void)StoreDeleteActionUserId:(NSString *)userid StoreID:(NSString *)StoreID Block:(void(^)())Block
+{
+    NSString *body=[NSString stringWithFormat:@"userId=%@&storeId=%@",userid,StoreID];
+    NSURL *url=[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",_URL,_STOREDELETEURL]];//url地址
+    NSMutableURLRequest *request=[[NSMutableURLRequest alloc]init ];
+    [request setURL:url];//设置URL 
+    [request setHTTPMethod:@"POST"];//设置访问方式POST/GET
+    [request setTimeoutInterval:60];//设置超时
+    [request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];//给提交参数进行UTF8编码
+    //[request setValue:(NSString *) forHTTPHeaderField:(NSString *)]//设置协议头
+    NSOperationQueue *queue=[[NSOperationQueue alloc]init];
+    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        //连接成功后调用的block
+        //data为网页返回数据
+        NSLog(@"%@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);
+        if(Block){
+            Block();
+        }
+    }];
+}
 +(void)MainRuningCallBack:(void(^)())block
 {
     dispatch_sync(dispatch_get_main_queue(),^{

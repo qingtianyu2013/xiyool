@@ -55,26 +55,15 @@
                                 <rect key="frame" x="16" y="531" width="35" height="35"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yC-rl-2cr">
-                                <rect key="frame" x="203" y="597" width="153" height="42"/>
+                                <rect key="frame" x="203" y="582" width="153" height="42"/>
                                 <color key="backgroundColor" red="0.25345308816626988" green="0.5507514184408977" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="编辑">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofM-oV-9Wj">
-                                <rect key="frame" x="21" y="597" width="153" height="43"/>
-                                <color key="backgroundColor" red="1" green="0.28978286961525879" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="删除">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="store_detail_edit.png" translatesAutoresizingMaskIntoConstraints="NO" id="jKa-qm-r54">
-                                <rect key="frame" x="233" y="601" width="33" height="33"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="store_detail_del.png" translatesAutoresizingMaskIntoConstraints="NO" id="0sm-l3-qXx">
-                                <rect key="frame" x="49" y="602" width="33" height="33"/>
+                                <rect key="frame" x="223" y="587" width="33" height="33"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="店铺简绍" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRo-NY-yQO">
                                 <rect key="frame" x="21" y="311" width="335" height="21"/>
@@ -117,11 +106,26 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MB6-bQ-btg">
                                 <rect key="frame" x="137" y="98" width="100" height="100"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofM-oV-9Wj">
+                                <rect key="frame" x="21" y="582" width="153" height="43"/>
+                                <color key="backgroundColor" red="1" green="0.28978286961525879" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="删除">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteStore:" destination="yDq-ob-BPp" eventType="touchUpInside" id="WDF-an-458"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="store_detail_del.png" translatesAutoresizingMaskIntoConstraints="NO" id="0sm-l3-qXx">
+                                <rect key="frame" x="37" y="587" width="33" height="33"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="deletestore" destination="ofM-oV-9Wj" id="ug3-ck-irT"/>
                         <outlet property="iconimge" destination="MB6-bQ-btg" id="uFp-NU-jCi"/>
                         <outlet property="storeadress" destination="iDx-aY-WSE" id="r0k-wt-Cg4"/>
                         <outlet property="storejianjie" destination="XRo-NY-yQO" id="mRi-im-Etb"/>
